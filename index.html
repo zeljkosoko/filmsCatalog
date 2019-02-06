@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>movie catalog</title>
+    <link rel="shortcut icon" href="images/icon/favIcon.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+</head>
+<body>
+    <div id="logDiv">
+        <button id="logOut">Log out</button>
+        <form action="" id="logIn">
+            <input type="email" name="email" id="eml" placeholder="email">
+            <input type="password" name="pass" id="pass" placeholder="password">
+            <input type="button" id="loginbtn" value="Log in">
+            <input type="button" value="Register" id="regbtn">
+            <input type="button" value="Forget password" id="passbtn">               
+        </form>
+    </div>
+    
+    <div id="titleDiv">
+        <h1>Home movie catalog</h1>
+    </div>
+    
+    <nav>
+        <div id="addNewFilm" class="menu">Add new film</div>
+        <div id="addNewDirector" class="menu">Add new director</div>
+        <div id="filmList" class="menu">View film list</div>
+        <div id="directorList" class="menu">View director list</div>
+        <div id="userinfo" class="menu">User information</div>
+        <div id="searchMenu" class="menu"><img src="images/search/search.png" alt=""></div>
+    </nav><br><br>
+
+    <div id="welcomeDiv">
+    </div><br>
+    
+    <form action="" id="register">
+        <fieldset>
+            <legend>Register new user</legend>
+            <label for="nametxt">Your name:</label><br>
+            <input type="text" name="name" id="nametxt" placeholder="name" required><br>
+            <label for="surname">Your surname:</label><br>
+            <input type="text" name="sur" id="surname" placeholder="surname" required><br>
+            <label for="gender">Gender:</label><br>
+            <input type="radio" name="gender" value="male">Male
+            <input type="radio" name="gender" value="female">Female <br>
+            <label for="useremail">Email address:</label><br>
+            <input type="text" name="eml" id="useremail" required><br>
+            <label for="psword">Your password:</label><br>
+            <input type="text" name="psw" id="psword" required><br><br>
+            <div id="newUserButtons">
+                <input type="submit" id="addNewUser" value="Add user">
+                <input type="reset" id="resetNewUser" value="Reset">
+            </div>
+        </fieldset>
+    </form>
+
+    <form action="" id="forgetPassword">
+        <fieldset>
+                <legend>Forget password</legend>
+                <label for="fEmail">Enter your email address:</label><br>
+                <input type="text" name="feml" id="fEmail"><br>
+                <input type="submit" id="showPass" value="Show Password">
+        </fieldset>
+    </form>
+    
+    <form action="" id="newFilm">
+            <fieldset>
+                    <legend>Add new film to the catalog</legend>
+                    <div id="leftDiv">
+                            <label for="filmId">ID:</label><br>
+                            <input type="text" name="filmId" id="filmId" required><br><br>
+                            <label for="filmTitle">Film title:</label><br>
+                            <input type="text" name="filmTitle" id="filmTitle" required><br><br>
+                            <label for="directorSelect">Select Director:</label><br>
+                            <select name="directors" id="directors"><br>
+                                <option value="">Pick director from list</option>
+                            </select>
+                            <input type="button" value="AddNew" id="addNewDir"><br>
+                            <label for="gender">Select gender:</label><br>
+                            <select name="gender" id="gender"></select><br>
+                            <label for="recordYear">Year of recording:</label><br>
+                            <input type="number" name="recordYear" id="recordYear"><br>
+                    </div>
+                    <div id="rightDiv">
+                            <label for="oneDrived">Backup on oneDrive or not?</label><br>
+                            <input type="radio" name="oneDrived" id="oneDrivedYes">Yes <br>
+                                <div id="oneDrive">
+                                    <label for="odUsername">What is oneDrive username?</label>
+                                    <input type="text" id="odUsername">
+                                </div>
+                            <input type="radio" name="oneDrived" id="oneDrivedNo">No<br><br>
+
+                            <label for="watched">Have you watched this film?</label><br>
+                            <input type="radio" name="watched" id="watchedY" value="watchedYes">Yes <br>
+                                <div id="yesWatch">
+                                    <label for="ratingFilm">Please, rate this film:</label>
+                                    <div id="rating">
+                                        <img src="images/stars/wstar.png" alt="whitestar" class="star 1">
+                                        <img src="images/stars/wstar.png" alt="whitestar" class="star 2">
+                                        <img src="images/stars/wstar.png" alt="whitestar" class="star 3">
+                                        <img src="images/stars/wstar.png" alt="whitestar" class="star 4">
+                                        <img src="images/stars/wstar.png" alt="whitestar" class="star 5">
+                                    </div>
+                                </div>
+                            <input type="radio" name="watched" id="watchedN" value="watchedNo">No<br><br>
+                            <div id="newFilmButtons">
+                                <input type="submit" value="Add film" id="addFilm">
+                                <input type="reset" value="Reset" id="resetAddFilm">
+                            </div>
+                    </div>
+                </fieldset>    
+    </form>
+    
+    <form action="" id="newDirector">
+        <fieldset>
+            <legend>Add new director to a list:</legend>
+            <label for="directorName">Director name</label><br>
+            <input type="text" name="directorName" id="directorName"><br><br>
+            <label for="directorSurname">Director surname</label><br>
+            <input type="text" name="directorSurname" id="directorSurname"><br><br>
+            <label for="directorBorn">Born:</label><br>
+            <input type="number" name="directorBorn" id="directorBorn"><br><br>
+            <label for="directorDied">Died:</label><br>
+            <input type="number" name="directorDied" id="directorDied"><br><br>
+            <label for="nationality">Nationality:</label><br>
+            <select name="nationality" id="nationality"></select><br><br>
+            <div id="newDirectorButtons">
+                <input type="submit" value="Save New Director" id="saveNewDirector">
+                <input type="reset" value="Reset" id="resetDirector">
+            </div>
+        </fieldset>
+    </form>
+    
+    <div id="filmListTable"></div>
+    
+    <div id="directorListTable"></div>
+
+    <div id="userProfile">
+        <div>Your name:<span id="userName"></span></div>
+        <div>Your surname:<span id="userSurname"></span></div>
+        <div>Your gender:<span id="userGender"></span></div>
+        <div>Your email address:<span id="userEmail"></span></div>
+    </div>
+
+    <div id="search">
+        <input type="text" name="searchTxt" id="searchTxt" placeholder="Find film..">
+        <div id="searchDivBtn">
+            <span>Search <img src="images/search/search.png" alt=""></span>
+        </div>
+        <span id="noFilm">Searched film doesn't exist.</span>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
