@@ -1,0 +1,110 @@
+body {
+    background-image: url("../images/bgpic.png");color: whitesmoke;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#logDiv {
+    float: right;
+}
+#logoutbtn {
+    float: right;
+    display: none;
+}
+form {
+    background: rgba(6, 6, 6, 0.6);
+}
+#logIn {
+    width: 250px;
+    padding: 15px;
+    background: rgba(56, 56, 56, 0.6);
+}
+#titleDiv {
+    clear: both;
+}
+h1 {
+    font-size: 50px;
+    padding-left: 20%;
+}
+nav {
+    margin: auto;
+    padding-left: 15%;
+}
+.menu {
+    border:solid whitesmoke 1px;
+    margin: 5px;
+    float: left;
+    padding: 5px;
+    background: rgba(6, 6, 6, 0.6);
+}
+.menu:hover {
+    color: brown;
+    cursor: pointer;
+}
+#searchMenu {
+    padding: 1px;
+}
+#searchMenu img {
+    height: 23px;
+    width: 23px;
+}
+#welcomeDiv {
+    clear: both;
+   padding-left: 10%;
+}
+
+#register {
+    width: 30%;
+    margin: 0 auto;
+    display: none;
+}
+#forgetPassword {
+    width: 20%;
+    margin: 0 auto;
+    display: none;
+}
+#newFilm {
+    float: left;
+    width: 50%;
+    margin-left: 20px;
+}
+#leftDiv {
+    float: left;
+    margin-right: 40px;
+}
+#oneDrive {
+    display: none;
+}
+#rating>img {
+    height: 30px;
+    width: 30px;
+}
+#yesWatch {
+    display: none;
+}
+
+#newDirector {
+    float: left;
+    width: 30%;
+    margin-left: 30px;
+    padding-left: 10%;
+}
+#userProfile {
+    width: 25%;
+    margin: 0 auto;
+    border:solid whitesmoke 1px;
+    padding: 2%;
+}
+#search {
+    width: 25%;
+    /* display: none; */
+}
+#searchTxt {
+    width: 230px;
+}
+#searchDivBtn {
+    width: 80px;
+    float: right;
+    border: solid whitesmoke 1px;
+}
+#searchDivBtn img {
+    height: 18px; width: 18px;
+}
