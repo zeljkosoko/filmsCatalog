@@ -47,6 +47,7 @@ nav {
     width: 23px;
 }
 #welcomeDiv {
+    /* there is not floating div by left(right)side */
     clear: both;
    padding-left: 10%;
 }
@@ -61,10 +62,12 @@ nav {
     margin: 0 auto;
     display: none;
 }
-#newFilm {
+#filmForm{
+    display: none;
+    /* position: relative; */
     float: left;
-    width: 50%;
-    margin-left: 20px;
+    width: 40%;
+    margin: 50px;
 }
 #leftDiv {
     float: left;
@@ -81,7 +84,8 @@ nav {
     display: none;
 }
 
-#newDirector {
+#directorForm {
+    display: none;
     float: left;
     width: 30%;
     margin-left: 30px;
@@ -93,18 +97,28 @@ nav {
     border:solid whitesmoke 1px;
     padding: 2%;
 }
-#search {
-    width: 25%;
-    /* display: none; */
-}
+
 #searchTxt {
     width: 230px;
 }
 #searchDivBtn {
     width: 80px;
-    float: right;
+    display: inline-block;
     border: solid whitesmoke 1px;
 }
 #searchDivBtn img {
     height: 18px; width: 18px;
 }
+
+#filmListTable {
+    display: none;
+    margin: 50px;
+} 
+
+#directorListTable, #userProfile, #search {display: none;}
+/* #noFilm {
+    display: none;
+}
+#userProfile {
+    display: none;
+} */
