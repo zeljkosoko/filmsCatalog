@@ -48,7 +48,7 @@
             <input type="text" name="eml" id="useremail" required><br>
             <label for="psword">Your password:</label><br>
             <input type="text" name="psw" id="psword" required><br><br>
-            <div id="newUserButtons">
+            <div id="userButtons">
                 <input type="submit" id="addNewUser" value="Add user">
                 <input type="reset" id="resetNewUser" value="Reset">
             </div>
@@ -64,21 +64,21 @@
         </fieldset>
     </form>
     
-    <form action="" id="newFilm">
+    <form action="" id="filmForm">
             <fieldset>
                     <legend>Add new film to the catalog</legend>
                     <div id="leftDiv">
                             <label for="filmId">ID:</label><br>
-                            <input type="text" name="filmId" id="filmId" required><br><br>
+                            <input type="text" id="filmId" name="filmId" required><br><br>
                             <label for="filmTitle">Film title:</label><br>
-                            <input type="text" name="filmTitle" id="filmTitle" required><br><br>
-                            <label for="directorSelect">Select Director:</label><br>
-                            <select name="directors" id="directors"><br>
+                            <input type="text" id="filmTitle" name="filmTitle" required><br><br>
+                            <label for="dirs">Select Director:</label><br>
+                            <select id="directors" name="dirs"><br>
                                 <option value="">Pick director from list</option>
                             </select>
                             <input type="button" value="AddNew" id="addNewDir"><br>
                             <label for="gender">Select gender:</label><br>
-                            <select name="gender" id="gender"></select><br>
+                            <select id="gender"></select><br>
                             <label for="recordYear">Year of recording:</label><br>
                             <input type="number" name="recordYear" id="recordYear"><br>
                     </div>
@@ -104,7 +104,7 @@
                                     </div>
                                 </div>
                             <input type="radio" name="watched" id="watchedN" value="watchedNo">No<br><br>
-                            <div id="newFilmButtons">
+                            <div id="filmButtons">
                                 <input type="submit" value="Add film" id="addFilm">
                                 <input type="reset" value="Reset" id="resetAddFilm">
                             </div>
@@ -112,7 +112,7 @@
                 </fieldset>    
     </form>
     
-    <form action="" id="newDirector">
+    <form action="" id="directorForm">
         <fieldset>
             <legend>Add new director to a list:</legend>
             <label for="directorName">Director name</label><br>
@@ -125,7 +125,7 @@
             <input type="number" name="directorDied" id="directorDied"><br><br>
             <label for="nationality">Nationality:</label><br>
             <select name="nationality" id="nationality"></select><br><br>
-            <div id="newDirectorButtons">
+            <div id="directorButtons">
                 <input type="submit" value="Save New Director" id="saveNewDirector">
                 <input type="reset" value="Reset" id="resetDirector">
             </div>
@@ -148,7 +148,8 @@
         <div id="searchDivBtn">
             <span>Search <img src="images/search/search.png" alt=""></span>
         </div>
-        <span id="noFilm">Searched film doesn't exist.</span>
+        <div id="resultsDiv"></div>
+        <span id="noFilm">Searched film doesn't exist.</span> 
     </div>
 
     <script src="js/script.js"></script>
