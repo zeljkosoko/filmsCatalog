@@ -642,6 +642,35 @@ var showOnlyDirectorsTable = function () {
 }
 document.getElementById("directorList").addEventListener("click", showOnlyDirectorsTable);
 
+//   11. AF -Edit/delete
+var editAndDelete = (function () {
+    var allEditFilmBtns = document.querySelectorAll("button[id$='_edit']");//for mouse event only
+    allEditFilmBtns.forEach(element => {
+        element.addEventListener("mouseover",function (event) {
+            event.target.style.background = "red";
+        });
+        element.addEventListener("mouseleave",function (event) {
+            event.target.style.background = "grey";
+        });
+    });
+    
+    var saveChangesF = document.createElement("button");
+    saveChangesF.setAttribute("id","saveChangesF");
+    saveChangesF.setAttribute("type","submit");
+    saveChangesF.textContent = "Save changes";
+    document.getElementById("filmButtons").appendChild(saveChangesF);
+
+    var saveUpdatedFilmInLS = function (filmID) {
+        if(allFilms[filmID].id == getValue('filmId') && document.querySelectorAll("required")!= null ){
+            allFilms[filmID] =  filmsAndDirectors.initFilm();
+        } else {
+            console.log('There is no film for that id and you must fill all required fields!');         
+        }
+        lStorage.save('allFilms', allFilms);//in ls in 'allFilms' SAVE this changed jsObject allFilms
+    };
+    var editFilm
+
+})();
 // window.onload = function () {
 //     var appCache = window.applicationCache;
 //     appCache.oncached = function (e) { console.log("cache successfully downloaded"); }; }
