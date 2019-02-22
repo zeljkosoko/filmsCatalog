@@ -1,2 +1,2 @@
 # filmsCatalog
-Web App in html, css and js with CRUD functions
+Web App in JavaScript with create, read, update, delete and search function.
